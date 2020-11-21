@@ -15,6 +15,7 @@ class SiteDefectsRecyclerViewAdapter(
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val siteNameText: TextView = view.findViewById(R.id.siteNameText)
+        val timestampText: TextView = view.findViewById(R.id.timestampText)
         var id: Int? = null
 
         init {
@@ -35,8 +36,10 @@ class SiteDefectsRecyclerViewAdapter(
         Log.i("SiteDefectsRecyclerView", "onBindViewHolder: $position")
         val siteDefect = siteDefects[position]
 
+        // makes title of subject in list
         holder.id = siteDefect.id
         holder.siteNameText.text = siteDefect.siteName
+        holder.timestampText.text = siteDefect.timestamp
     }
     override fun getItemCount(): Int = siteDefects.size
 }
