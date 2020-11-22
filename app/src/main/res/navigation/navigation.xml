@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listSiteDefectsFragment">
+
+    <fragment
+        android:id="@+id/listSiteDefectsFragment"
+        android:name="com.example.bottomlinelocations.ListSiteDefectsFragment"
+        android:label="ListSiteDefectsFragment" >
+        <action
+            android:id="@+id/action_listSiteDefectsFragment_to_addSiteDefects"
+            app:destination="@id/addSiteDefects" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSiteDefects"
+        android:name="com.example.bottomlinelocations.AddSiteDefects"
+        android:label="fragment_add_site_defects"
+        tools:layout="@layout/fragment_add_site_defects" />
+</navigation>
