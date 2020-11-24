@@ -20,7 +20,9 @@ class SiteDefectsRecyclerViewAdapter(
 
         init {
             view.setOnClickListener{
+                Log.i("", ": tot hier $id")
                 val id = id ?: throw IllegalStateException()
+                //it.findNavController().navigate()
                 activity.showDetail(id)
             }
         }

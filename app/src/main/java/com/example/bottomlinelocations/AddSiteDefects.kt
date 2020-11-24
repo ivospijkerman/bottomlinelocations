@@ -26,7 +26,7 @@ class AddSiteDefects : Fragment() {
         // Inflate the layout for this fragment
         return binding.root
     }
-/*
+
     companion object {
         fun newInstance() =
             AddSiteDefects().apply {
@@ -34,5 +34,4 @@ class AddSiteDefects : Fragment() {
                 }
             }
     }
- */
 }

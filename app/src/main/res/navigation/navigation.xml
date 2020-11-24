@@ -12,10 +12,17 @@
         <action
             android:id="@+id/action_listSiteDefectsFragment_to_addSiteDefects"
             app:destination="@id/addSiteDefects" />
+        <action
+            android:id="@+id/action_listSiteDefectsFragment_to_detailSiteDefectsFragment"
+            app:destination="@id/detailSiteDefectsFragment3" />
     </fragment>
     <fragment
         android:id="@+id/addSiteDefects"
         android:name="com.example.bottomlinelocations.AddSiteDefects"
         android:label="fragment_add_site_defects"
         tools:layout="@layout/fragment_add_site_defects" />
+    <fragment
+        android:id="@+id/detailSiteDefectsFragment3"
+        android:name="com.example.bottomlinelocations.DetailSiteDefectsFragment"
+        android:label="DetailSiteDefectsFragment" />
 </navigation>
