@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import java.lang.IllegalStateException
 
@@ -22,7 +23,7 @@ class SiteDefectsRecyclerViewAdapter(
             view.setOnClickListener{
                 Log.i("", ": tot hier $id")
                 val id = id ?: throw IllegalStateException()
-                //it.findNavController().navigate()
+                //it.findNavController().navigate(ListSiteDefectsFragmentDirections.actionListSiteDefectsFragmentToDetailSiteDefectsFragment(id))
                 activity.showDetail(id)
             }
         }

@@ -14,7 +14,7 @@
             app:destination="@id/addSiteDefects" />
         <action
             android:id="@+id/action_listSiteDefectsFragment_to_detailSiteDefectsFragment"
-            app:destination="@id/detailSiteDefectsFragment3" />
+            app:destination="@id/detailSiteDefectsFragment" />
     </fragment>
     <fragment
         android:id="@+id/addSiteDefects"
@@ -22,7 +22,11 @@
         android:label="fragment_add_site_defects"
         tools:layout="@layout/fragment_add_site_defects" />
     <fragment
-        android:id="@+id/detailSiteDefectsFragment3"
+        android:id="@+id/detailSiteDefectsFragment"
         android:name="com.example.bottomlinelocations.DetailSiteDefectsFragment"
-        android:label="DetailSiteDefectsFragment" />
+        android:label="DetailSiteDefectsFragment" >
+        <argument
+            android:name="SiteId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

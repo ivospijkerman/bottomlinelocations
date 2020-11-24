@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bottomlinelocations.databinding.FragmentListSiteDefectsBinding
@@ -34,8 +35,7 @@ class ListSiteDefectsFragment : Fragment() {
         binding.siteDefectRecycler.adapter = adapter
 
         binding.addNewSiteDefectButton.setOnClickListener { v: View ->
-            v.findNavController().navigate(R.id.action_listSiteDefectsFragment_to_addSiteDefects
-            )
+            v.findNavController().navigate(ListSiteDefectsFragmentDirections.actionListSiteDefectsFragmentToAddSiteDefects())
         }
 
         return binding.root
