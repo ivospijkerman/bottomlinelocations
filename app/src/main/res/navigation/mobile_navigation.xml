@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.bottomlinelocations.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_addSiteDefect"
+        android:name="com.example.bottomlinelocations.ui.addSiteDefect.AddSiteDefectFragment"
+        android:label="@string/menu_addSiteDefect"
+        tools:layout="@layout/fragment_add_site_defects" />
+
+    <fragment
+        android:id="@+id/nav_listSiteDefects"
+        android:name="com.example.bottomlinelocations.ui.listSiteDefects.ListSiteDefectsFragment"
+        android:label="@string/menu_listSiteDefects"
+        tools:layout="@layout/fragment_list_site_defects" >
+        <action
+            android:id="@+id/action_nav_listSiteDefects_to_nav_addSiteDefect"
+            app:destination="@id/nav_addSiteDefect" />
+    </fragment>
+</navigation>
