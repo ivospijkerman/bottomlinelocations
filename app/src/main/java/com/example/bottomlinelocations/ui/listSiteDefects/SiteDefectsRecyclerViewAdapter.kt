@@ -1,8 +1,17 @@
 package com.example.bottomlinelocations.ui.listSiteDefects
 
-/*
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.bottomlinelocations.MainActivity
+import com.example.bottomlinelocations.R
+import com.example.bottomlinelocations.data.SiteDefects
+
 class SiteDefectsRecyclerViewAdapter(
-    private val activity: ListSiteDefectsFragment,
+    private val activity: MainActivity,
     private val siteDefects: List<SiteDefects>
 ) : RecyclerView.Adapter<SiteDefectsRecyclerViewAdapter.ViewHolder>() {
 
@@ -38,5 +47,3 @@ class SiteDefectsRecyclerViewAdapter(
     }
     override fun getItemCount(): Int = siteDefects.size
 }
-
- */

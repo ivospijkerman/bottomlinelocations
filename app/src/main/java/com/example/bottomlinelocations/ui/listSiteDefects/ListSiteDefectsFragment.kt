@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.bottomlinelocations.MainActivity
 import com.example.bottomlinelocations.R
 import com.example.bottomlinelocations.data.SiteDefects
 import com.example.bottomlinelocations.databinding.FragmentListSiteDefectsBinding
@@ -23,7 +24,7 @@ class ListSiteDefectsFragment : Fragment() {
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         listSiteDefectsViewModel =
                 ViewModelProvider(this).get(SlideshowViewModel::class.java)
         binding =
@@ -48,26 +49,17 @@ class ListSiteDefectsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.i("ListDefectsFragment", "OnCreateView: ${SiteDefects.getAll()}")
-        //val adapter = SiteDefectsRecyclerViewAdapter(activity as ListSiteDefectsFragment, SiteDefects.getAll())
+        val adapter = SiteDefectsRecyclerViewAdapter(activity as MainActivity, SiteDefects.getAll())
         binding.siteDefectRecycler.setHasFixedSize(true)
         binding.siteDefectRecycler.layoutManager = LinearLayoutManager(activity)
-        //binding.siteDefectRecycler.adapter = adapter
+        binding.siteDefectRecycler.adapter = adapter
 
         view.findViewById<Button>(R.id.addNewSiteDefectButton).setOnClickListener{
             findNavController().navigate(R.id.action_nav_listSiteDefects_to_nav_addSiteDefect)
         }
 
     }
-/*
-    fun showDetail(siteDefectsId: Int) {
-        val detailSiteDefectsFragment = DetailSiteDefectsFragment.newInstance(siteDefectsId)
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.activeFragment, detailSiteDefectsFragment)
-            .addToBackStack(null)
-            .commit()
-    }
 
- */
         companion object {
         fun newInstance() =
             ListSiteDefectsFragment().apply {
